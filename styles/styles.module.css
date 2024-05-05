@@ -1,0 +1,28 @@
+.pageContainer {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+#sidebar {
+  height: 100vh;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid whitesmoke;
+}
+.editorContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.textEditor {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+}
