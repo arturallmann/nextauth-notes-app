@@ -3,7 +3,7 @@ import React from "react";
 import { Textarea } from "@nextui-org/react";
 export default function Home() {
   return (
-    <main>
+    <main className="dark text-foreground bg-background">
       <div className={styles.pageContainer}>
         <div id={styles.sidebar}>
           Notes:
@@ -11,12 +11,22 @@ export default function Home() {
         </div>
         <div className={styles.editorContainer}>
           <div className={styles.toolbar}>toolbar</div>
-          <div className="note">
-            <div className="noteTitle">
-              <input type="text"></input>
+          <div className={styles.note}>
+            <div className={styles.noteTitle}>
+              <Textarea
+                variant="bordered"
+                placeholder="Title"
+                maxRows={1}
+                className="text-lg"
+              ></Textarea>
             </div>
-            <div className="noteContent">
-              <Textarea></Textarea>
+            <div className={styles.noteContent}>
+              <Textarea
+                variant="faded"
+                label="Content"
+                className="text-md"
+                placeholder="Start writing here..."
+              ></Textarea>
             </div>
           </div>
         </div>

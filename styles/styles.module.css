@@ -34,8 +34,10 @@
 }
 .noteTitle {
   flex: 0 1 auto;
-  height: 10%;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .noteContent {
   flex: 1 1 auto;
+  height: 100%;
 }
