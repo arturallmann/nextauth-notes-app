@@ -1,7 +1,6 @@
 import styles from "../styles/styles.module.css";
 import React from "react";
-import Tiptap from "../components/Tiptap.js";
-
+import { Textarea } from "@nextui-org/react";
 export default function Home() {
   return (
     <main>
@@ -12,7 +11,14 @@ export default function Home() {
         </div>
         <div className={styles.editorContainer}>
           <div className={styles.toolbar}>toolbar</div>
-          <Tiptap />
+          <div className="note">
+            <div className="noteTitle">
+              <input type="text"></input>
+            </div>
+            <div className="noteContent">
+              <Textarea></Textarea>
+            </div>
+          </div>
         </div>
       </div>
     </main>
