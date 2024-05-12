@@ -1,7 +1,12 @@
 import styles from "../styles/styles.module.css";
 import React from "react";
 import { Textarea } from "@nextui-org/react";
+import { Session } from "inspector";
+import { redirect } from "next/navigation";
 export default function Home() {
+  if (!Session) {
+    redirect("/api/auth/signin");
+  }
   return (
     <main className="dark text-foreground bg-background">
       <div className={styles.pageContainer}>
@@ -24,6 +29,7 @@ export default function Home() {
               <Textarea
                 variant="faded"
                 label="Content"
+                maxRows={40}
                 className="text-md"
                 placeholder="Start writing here..."
               ></Textarea>
